@@ -1,0 +1,26 @@
+1. Purpose
+The purpose of this memo is to provide stakeholders with a summary of the momentum-based equity trading project. 
+The project aims to automate the ingestion, preprocessing, and analysis of U.S. equities data to identify top-performing stocks based on historical momentum and implement a systematic, rules-based trading strategy.
+
+2. Primary Stakeholders
+Quantitative Traders & Portfolio Managers
+Responsible for making informed investment decisions and evaluating systematic trading strategies. 
+Their primary interest is actionable signals, performance metrics, and risk insights.
+
+3. Key Deliverables
+Automated data ingestion and preprocessing pipeline for U.S. equities.
+Momentum-based backtesting framework evaluating strategy performance against the S&P 500.
+Interactive dashboard displaying cumulative returns, Sharpe ratio, maximum drawdown, and hit rate.
+Documentation detailing methodology, assumptions, and operational workflow.
+
+4. Metrics of Success
+Strategy Sharpe ratio exceeds benchmark or demonstrates risk-adjusted outperformance.
+Cumulative return meets or exceeds S&P 500 benchmark over backtest period.
+Maximum drawdown remains within acceptable limits relative to risk appetite.
+Hit rate (positive return frequency) ≥ 50% across rebalancing periods.
+
+5. Assumptions & Constraints
+Data from public APIs (e.g., yFinance) is accurate and complete.
+Strategy universe is limited to U.S. equities, primarily S&P 500 constituents.
+Historical backtest may not reflect future performance; live trading carries additional risk.
+Computational constraints limit dataset size and backtest frequency.
