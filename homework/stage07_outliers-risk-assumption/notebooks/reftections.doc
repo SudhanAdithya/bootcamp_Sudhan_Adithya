@@ -1,0 +1,24 @@
+## Reflection
+
+### Method and Thresholds Chosen:
+I used two primary methods to handle outliers:
+1. **IQR Rule** with the standard 1.5×IQR threshold.
+2. **Winsorization** at the 5th and 95th percentiles.
+
+These choices reflect common industry standards and are suitable for symmetrical or near-normal distributions. The z-score method was used for confirmation, but not selected for filtering due to potential distortion from extreme outliers influencing mean and std.
+
+### Assumptions:
+- I assumed the return data is roughly symmetric, allowing IQR/winsorization to be effective.
+- For linear regression, I assumed a linear relationship between `daily_return` and `daily_return_2` with additive Gaussian noise.
+
+### Observed Impacts:
+- Removing outliers (IQR) reduced variance and changed regression coefficients slightly.
+- Winsorization preserved dataset size and mitigated extreme influence, producing more stable regression metrics.
+- R² increased when outliers were removed or capped, suggesting better model fit, though at the cost of ignoring potentially meaningful market shocks.
+
+### Risks If Assumptions Are Wrong:
+- If outliers are not noise but true structural breaks (e.g., market crashes), removing them may hide critical risk patterns.
+- Winsorization can mask true tail behavior, especially in financial contexts where tail risk matters.
+- Over-cleaning can lead to misleading confidence in model stability.
+
+Ultimately, the choice depends on the modeling goal: **risk sensitivity** favors keeping extreme data, while **forecast stability** might prefer IQR/winsorized treatment.
