@@ -1,0 +1,4 @@
+scenario,MetricA,% Change vs Baseline
+alt_impute,74.45608245187123,-0.77
+alt_outlier,84.23666718747867,12.26
+baseline,75.03720601002196,0.0

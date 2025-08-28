@@ -1,0 +1,4 @@
+scenario,return,volatility,sharpe,assumption,value,Category,MetricA,MetricB,Date
+baseline,0.12,0.18,0.56,imputation,median,Y,75.03720601002196,99.56301396692939,2025-02-01
+alt_impute,0.11,0.185,0.49,imputation,mean,Z,74.45608245187123,175.9137367646714,2025-02-02
+alt_outlier,0.135,0.19,0.61,outlier_rule,3sigma,Y,84.23666718747867,128.27468381499088,2025-02-03
